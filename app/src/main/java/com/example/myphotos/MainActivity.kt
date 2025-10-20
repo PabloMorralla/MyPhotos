@@ -75,12 +75,14 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 )
             }
         }
+
         AsyncImage(
             model = ImageRequest.Builder(context)
                 .data(selectedPicture)
                 .build(),
             contentDescription = "Imagen",
-            contentScale = ContentScale.FillBounds
+            contentScale = ContentScale.FillBounds,
+            modifier = Modifier.fillMaxSize()
         )
     }
 }
